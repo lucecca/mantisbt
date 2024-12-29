@@ -5,18 +5,21 @@ The aim of the role is to install mantisbt issue tracker, alongside with apache 
 
 ## Requirements
 ------------
-Put Selinux in **Permissive** mode otherwise the **url_get** method invoked by the admin/install.php page will not work.
+Put Selinux in **Permissive** mode otherwise the **url_get** method invoked by the admin/install.php page will not work. 
+This is not the proper way to tackle the issue but it was he quickest one at least for me, the proper way is to properly configure selinux to allow the **url_get** method.
 
 ## Role Variables
 --------------
 Variables have been defined in the **vars/main.yml** and in **default/main.yml**
 In *vars/main.yml* there are:
 
-`mantisbt_version: 2.27.0 #The version of mantis to be downloaded and installed`
-
-`force_mnatisbt_installation: false #An hook to froce mantisbt installation independently if alaready installed`
+```
+mantisbt_version: 2.27.0 #The version of mantis to be downloaded and installed
+force_mnatisbt_installation: false #An hook to froce mantisbt installation independently if alaready installed
+```
 
 In *defaylt/main.yml* there are:
+
 Web server variables
 ```
 webserver: httpd #Web server to be used
