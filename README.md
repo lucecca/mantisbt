@@ -18,7 +18,7 @@ mantisbt_version: 2.27.0 #The version of mantis to be downloaded and installed
 force_mnatisbt_installation: false #An hook to froce mantisbt installation independently if alaready installed
 ```
 
-In *defaylt/main.yml* there are:
+In *default/main.yml* there are:
 
 Web server variables
 ```
